@@ -1,0 +1,30 @@
+PODS:
+  - AMapFoundation (1.8.2)
+  - AMapLocation (2.11.0):
+    - AMapFoundation (>= 1.8.0)
+  - AMapNavi (10.1.600):
+    - AMapFoundation (>= 1.8.2)
+  - AMapSearch (9.7.4):
+    - AMapFoundation (>= 1.8.0)
+
+DEPENDENCIES:
+  - AMapLocation (~> 2.9)
+  - AMapNavi (= 10.1.600)
+  - AMapSearch (= 9.7.4)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AMapFoundation
+    - AMapLocation
+    - AMapNavi
+    - AMapSearch
+
+SPEC CHECKSUMS:
+  AMapFoundation: 9885c48fc3a78fdfb84a0299a2293e56ea3c9fec
+  AMapLocation: 8c46dbe995333ad6cae147d54a7307a577020be0
+  AMapNavi: 86bc5bd0100d2fb6a705d608c06b7e1299bd4d56
+  AMapSearch: a30e89212f55a867ac951ce71f800313cd54ad0a
+
+PODFILE CHECKSUM: 3dd8277303bf0af7dd53f0a817708420b4eb554b
+
+COCOAPODS: 1.16.2
