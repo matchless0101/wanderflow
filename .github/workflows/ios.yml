@@ -19,8 +19,15 @@ jobs:
       - name: Set up Xcode version
         run: sudo xcode-select -s /Applications/Xcode.app
 
+      # 🛠️ 新增步骤：安装 CocoaPods 依赖
+      - name: Install CocoaPods dependencies
+        run: |
+          pod install --repo-update
+
+      # 🛠️ 修改步骤：强制指定 iOS 版本为 17.0，并使用通用模拟器
       - name: Build WanderFlow
         run: |
           xcodebuild build \
             -scheme "WanderFlow" \
-            -destination 'generic/platform=iOS Simulator'
+            -destination 'generic/platform=iOS Simulator' \
+            IPHONEOS_DEPLOYMENT_TARGET=17.0
