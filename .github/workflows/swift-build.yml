@@ -36,7 +36,7 @@ jobs:
       - name: Build and Test App
         run: |
           xcodebuild build-for-testing \
-            -scheme "YourSchemeName" \
+            -scheme "WanderFlow" \
             -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" \
             -quiet
         # 注意：请将 "YourSchemeName" 替换为你项目真实的 Scheme 名称
