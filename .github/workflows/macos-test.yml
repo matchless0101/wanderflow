@@ -1,0 +1,26 @@
+name: MacOS Hello World  # 工作流的名称
+
+# 触发条件：当你向 main 分支 push 代码或提交 PR 时触发
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    # 指定运行环境：这里使用的是最新的 macOS
+    runs-on: macos-latest
+
+    steps:
+      # 1. 检出仓库代码，这样 Actions 才能访问你的代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. 执行一条自定义的终端命令
+      - name: Run a one-line script
+        run: echo "Hello from macOS on GitHub Actions!"
+
+      # 3. 检查系统版本（验证确实是 macOS）
+      - name: Check macOS version
+        run: sw_vers
